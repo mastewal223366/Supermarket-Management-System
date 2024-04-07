@@ -1,0 +1,43 @@
+# Project Type:  Windows Form Application
+# FrameWork: ".Net Framework" version 4.7.2
+# IDE: Visual Studio 2022 
+# DBMS used: MySQL version 8.0.31
+# External Libraries used(Added thorugh nutget packages): FontAwsome.Sharp
+			 				: MySQL.Data 
+
+During the requirements gathering time we have seen that different products with the same name may exist in the same supermarket, so to avoid confusions the database is designed and structured in a way where those products with the same name will have their own separate row and we can differentiate them with their brand name or category name(i.e: we may see the name "Anbesa" being used by different edible products).
+So when you see duplicate products names, it's important to remember that those products are totally different either by brand or by category. So, all the tables in the database are in normalized in their finest form.
+
+## How to use the program
+
+We have made the project to be easily navigated to accomplish any task. There is no setup or installation file for this project.
+There are 3 main forms. Which are Login.cs AdminForm.cs and Seller.cs. The program starts from the Login form. You can check that in the program.cs file.
+There are also another 11 forms which are included in AdminForm.cs and Seller.cs.
+After loggin in into system you can go choose any menu from the left panels. Thats how you access all the different tabs found in the programs. 
+Before running the application it's neccessary to setup the Database with an admin profile. The database name must be "supermarket" all small letters. We have already included the database file in this project folder, so no need to create and setup one. Import the database to your MySQL DBMS and once the Database server is running and you can start using the program.
+After you did that that and the login page appears, you need to fill in the username and the password for the selected role. You can change the role from the combo box above the username textbox. There are two roles(An Admin and a Cashier) in the system. Use the name: "maste" and password "2233" to login as admin. Or you can check user accounts from the database and login with your preffered way.
+
+#What you can do when you login as an admin:
+
+Once you login as admin you have all the rights and privileges to make any changes on the whole system.
+The first thing you will come across is a Dashboard screen where the summary of products quantity, number of users and such informations appear.
+There is a navigation menu on the left panel where you can select and go to different tabs.
+	//Adding a product to the supermarket
+	So as andmin you can add products by clicking on "Products" tab. Drop down appears and there you will select "Add Products" panel.
+	when ever you need to add a new product to the supermarket, you can add it through the "Add Products". You can also add categories, suppliers and also Brands separately  before acquiring the product.
+
+The admin can also manage accounts, add sellers to the system see selling history.
+
+#What you can do when you login as a Cashier(Seller):
+
+There are two main tabs in the cashier window.
+you can create cashier accounts once you login as admin and use the account you created to login into the system or you can use an account we already created with the username "miki" and password "2233". When logging in, make sure you selected the appropriate role from the combobox.
+Once you login as a cashier you can do two things.
+	1. Sell products: the selling form is what appears first when you login. There are variety of search methods. You search the product you want and select it on the grid view table so that all the information about the item will  be filled on the boxes. When pressing the "sell" button a dialogue box appears and once you confirm the transaction will be done.
+	2. Profile: the user can update his profile going to this tab making the necessary changes.
+
+
+#!!!!! Important
+	# Incase the Database import doesn't work, an empty database has to be created with the name "supermarket" and then import supermarket.sql file on the already created empty database.
+	# When clicking on the any row on the gridview table, the textboxes and comboboxes will be filled automatically, so can make any change on the selected item without filling out the data manually.
+	
